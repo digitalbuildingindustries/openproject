@@ -222,6 +222,7 @@ import {WorkPackageInlineCreateService} from "core-components/wp-inline-create/w
 import {WorkPackageCommentFieldComponent} from "core-components/work-packages/work-package-comment/wp-comment-field.component";
 import {WorkPackageInlineAddExistingChildService} from "core-components/wp-relations/wp-relation-add-child/wp-inline-add-existing-child.service";
 import {WorkPackageInlineAddExistingChildComponent} from "core-components/wp-relations/wp-relation-add-child/wp-inline-add-existing-child.component";
+import {WorkPackageBreadcrumbParentComponent} from './components/work-packages/wp-breadcrumb/wp-breadcrumb-parent.component';
 
 @NgModule({
   imports: [
@@ -379,6 +380,7 @@ import {WorkPackageInlineAddExistingChildComponent} from "core-components/wp-rel
     WorkPackageRelationsCountComponent,
     WorkPackageWatchersCountComponent,
     WorkPackageBreadcrumbComponent,
+    WorkPackageBreadcrumbParentComponent,
     WorkPackageEditFieldGroupComponent,
     WorkPackageSplitViewToolbarComponent,
     WorkPackageWatcherButtonComponent,

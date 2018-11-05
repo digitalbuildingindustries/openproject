@@ -31,10 +31,13 @@ import {WorkPackageResource} from 'core-app/modules/hal/resources/work-package-r
 
 @Component({
   templateUrl: './wp-breadcrumb.html',
+  styleUrls: ['./wp-breadcrumb.sass'],
   selector: 'wp-breadcrumb',
 })
 export class WorkPackageBreadcrumbComponent {
   @Input('workPackage') workPackage:WorkPackageResource;
+
+  public inputActive:boolean = false;
 }
 
 
