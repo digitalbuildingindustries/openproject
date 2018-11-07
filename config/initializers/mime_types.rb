@@ -37,3 +37,4 @@ Mime::SET << Mime[:csv] unless Mime::SET.include?(Mime[:csv])
 
 Mime::Type.register 'application/pdf', :pdf unless Mime::Type.lookup_by_extension(:pdf)
 Mime::Type.register 'image/png', :png unless Mime::Type.lookup_by_extension(:png)
+Mime::Type.register "application/octet-stream", :bcf unless Mime::Type.lookup_by_extension(:bcf)

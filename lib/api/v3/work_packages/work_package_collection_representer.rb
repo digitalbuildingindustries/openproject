@@ -191,7 +191,8 @@ module API
             representation_format_pdf_attachments,
             representation_format_pdf_description,
             representation_format_pdf_description_attachments,
-            representation_format_csv
+            representation_format_csv,
+            representation_format_bcf
           ]
 
           if Setting.feeds_enabled?
@@ -244,6 +245,13 @@ module API
                                 i18n_key: 'pdf_with_descriptions_and_attachments',
                                 mime_type: 'application/pdf',
                                 url_query_extras: 'show_descriptions=true&show_attachments=true'
+        end
+
+        def representation_format_bcf
+          representation_format 'atom',
+                                format: 'bcf',
+                                i18n_key: 'bcf',
+                                mime_type: 'application/octet-stream'
         end
 
         def representation_format_csv

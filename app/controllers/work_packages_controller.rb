@@ -68,6 +68,17 @@ class WorkPackagesController < ApplicationController
                        layout: 'angular'
       end
 
+      format.bcf do
+        work_packages = @query.results.work_packages
+        name = @query.name == "_" ? "openproject-work-packages" : @query.name
+        attachment = BCF.create_bcf_file! file_name: name, work_packages: work_packages
+
+        send_file(
+          attachment.file.local_file.path,
+          type: "application/octet-stream"
+        )
+      end
+
       format.any(*WorkPackage::Exporter.list_formats) do
         export_list(request.format.symbol)
       end
