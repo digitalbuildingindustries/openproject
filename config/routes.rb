@@ -92,6 +92,7 @@ OpenProject::Application.routes.draw do
   # remove the prefix (v3) before checking whether the method is supported. I
   # don't understand why that should make sense.
   mount API::Root => '/'
+  mount API::BCF::Root => '/bcf/'
 
   get '/roles/workflow/:id/:role_id/:type_id' => 'roles#workflow'
 
