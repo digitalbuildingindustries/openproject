@@ -86,6 +86,13 @@ module OpenProject
     # different ETag on every request, Rack::Deflater has to be in the chain of
     # middlewares after Rack::ETag.  #insert_before is used because on
     # responses, the middleware stack is processed from top to bottom.
+    config.middleware.use Rack::Cors do
+      allow do
+        origins "*"
+        resource "*", headers: :any, methods: [:get, :post, :put, :delete, :options]
+      end
+    end  
+
     config.middleware.insert_before Rack::ETag,
                                     Rack::Deflater,
                                     if: lambda { |_env, _code, headers, _body|

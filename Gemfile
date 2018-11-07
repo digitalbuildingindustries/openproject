@@ -56,6 +56,8 @@ gem 'typed_dag', '~> 2.0.2'
 
 gem 'addressable', '~> 2.5.2'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 # Provide timezone info for TZInfo used by AR
 gem 'tzinfo-data', '~> 1.2018.4'
 

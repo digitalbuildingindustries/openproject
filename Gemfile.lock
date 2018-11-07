@@ -412,6 +412,7 @@ GEM
       rack (>= 0.4)
     rack-attack (5.2.0)
       rack
+    rack-cors (1.0.2)
     rack-protection (2.0.1)
       rack
     rack-test (1.0.0)
@@ -691,6 +692,7 @@ DEPENDENCIES
   pry-stack_explorer (~> 0.4.9.2)
   rabl (~> 0.13.0)
   rack-attack (~> 5.2.0)
+  rack-cors
   rack-protection (~> 2.0.0)
   rack-test (~> 1.0.0)
   rack_session_access
