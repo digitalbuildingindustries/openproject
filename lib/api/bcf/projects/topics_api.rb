@@ -66,13 +66,13 @@ module API
           get do
             WorkPackage
               .where(type_id: topic_type.id)
+              .where(project: @project)
               .all
               .map(&method(:topic_representer))
           end
 
           route_param :guid do
             get do
-              binding.pry
               cv = CustomValue.where(custom_field_id: guid_cf.id, value: params[:guid]).select(:customized_id)
               wp = WorkPackage.where(id: cv).first
 
